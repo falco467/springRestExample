@@ -1,0 +1,36 @@
+### Call API Index
+GET http://localhost:8080/
+
+### Products Profile
+GET http://localhost:8080/profile/products
+###
+GET http://localhost:8080/products
+###
+POST http://localhost:8080/products
+
+{
+  "name": "Product1",
+  "price": "100.20"
+}
+### Needs a valid UID of a created product
+DELETE http://localhost:8080/products/51d107a2-6cef-46c8-85a4-bcf3ae815721
+###
+GET http://localhost:8080/products/search/findDeleted
+
+### Orders Profile
+GET http://localhost:8080/profile/prodOrders
+###
+GET http://localhost:8080/prodOrders
+
+### Needs a valid UID of a created product
+POST http://localhost:8080/prodOrders
+
+{
+  "email": "test@example.com",
+  "products": [
+    "products/27af50ac-41c5-4bb6-886c-1175d1fbd254"
+  ]
+}
+###
+GET http://localhost:8080/prodOrders/search/findInRange?start=2020-01-01T00:00:00&end=2021-01-01T00:00:00
+###
