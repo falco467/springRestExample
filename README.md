@@ -35,3 +35,15 @@ The project contains the in-memory database H2, which will not
 persist to disk for ease of use. Other databases can easily
 be attached by creating a springboot.properties configuration
 with a new profile and the connection information.
+
+## Further considerations
+
+The Application currently provides no security whatsoever,
+deployment in a live environment should be secured in one of
+the following recommended ways:
+
+ 1. Deploy in a service-mesh with a side-car gateway app, which
+    will handle security and access-restrictions.
+
+ 2. Use behind a classical edge service-gateway
+ 
